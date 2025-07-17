@@ -27,7 +27,6 @@ app.MapPost("/workflows", (WorkflowDefinition def) => {
     workflowDefinitions.Add(def);
     return Results.Ok(def);
 });
-
 // Get a workflow definition
 app.MapGet("/workflows/{id}", (string id) => {
     var def = workflowDefinitions.FirstOrDefault(w => w.Id == id);
